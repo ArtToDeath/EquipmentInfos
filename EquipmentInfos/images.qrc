@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/status">
+        <file>images/error.png</file>
+        <file>images/finish.png</file>
+    </qresource>
+</RCC>

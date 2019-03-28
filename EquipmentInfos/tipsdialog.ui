@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TipsDialog</class>
+ <widget class="QDialog" name="TipsDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>250</width>
+    <height>201</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QLabel" name="label_time">
+   <property name="geometry">
+    <rect>
+     <x>74</x>
+     <y>89</y>
+     <width>102</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pBtn_exit">
+   <property name="geometry">
+    <rect>
+     <x>87</x>
+     <y>150</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+    </font>
+   </property>
+   <property name="text">
+    <string>退出程序</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_status">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>30</y>
+     <width>51</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>51</width>
+     <height>41</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>51</width>
+     <height>41</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">image: url(:/status/images/finish.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="margin">
+    <number>0</number>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
