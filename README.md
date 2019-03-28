@@ -8,4 +8,6 @@
 
 使用QtXlsx生成Excel文档
 
-![](https://i.imgur.com/2XRyq68.png)
+![](https://github.com/ArtToDeath/EquipmentInfos/blob/master/%E7%A8%8B%E5%BA%8F%E7%95%8C%E9%9D%A2.PNG)
+
+![](https://github.com/ArtToDeath/EquipmentInfos/blob/master/excel.PNG)
