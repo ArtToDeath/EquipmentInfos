@@ -39,7 +39,8 @@ QList<EquipmentInfo> EquipmentUtil::getSoftwareInfos()
                         && !softWareName.toLower().contains("update")
                         && !softWareName.toLower().contains("redistributable")
                         && !softWareName.toLower().contains("flash")
-                        && !softWareName.toLower().contains(".net framework")){
+                        && !softWareName.toLower().contains(".net framework")
+                        && !softWareName.contains(tr("更新"))){
                     //日期查询
                     QString installDate = reg.value("InstallDate").toDateTime().toString("yyyy-MM-dd");
                     if(installDate.isEmpty()){
@@ -51,6 +52,8 @@ QList<EquipmentInfo> EquipmentUtil::getSoftwareInfos()
                             QString displayIcon = reg.value("DisplayIcon").toString();
                             if(displayIcon.contains(",")){
                                 displayIcon = displayIcon.left(displayIcon.length() - 2);
+                            }else if(displayIcon.contains("\"")){
+                                displayIcon = displayIcon.replace("\"", "");
                             }
 
                             info.setFile(displayIcon);
@@ -68,7 +71,6 @@ QList<EquipmentInfo> EquipmentUtil::getSoftwareInfos()
                         QSettings regSW("HKEY_LOCAL_MACHINE\\SOFTWARE\\SolidWorks\\Security", QSettings::NativeFormat);\
                         QString description = regSW.value("Serial Number").toString();
                         info.setDescrible("序列号: " + description);
-                        regSW.clear();
                     }
                     if(!list.contains(info)){
                         list.push_back(info);
@@ -78,7 +80,6 @@ QList<EquipmentInfo> EquipmentUtil::getSoftwareInfos()
             }
             reg.endGroup();
         }
-        reg.clear();
     }
     return list;
 }
@@ -94,6 +95,5 @@ EquipmentInfo EquipmentUtil::getOSInfo()
     QString productId = reg.value("ProductId").toString();
     EquipmentInfo info(OSName, OSVersion, installDate);
     info.setDescrible("产品ID: " + productId);
-    reg.clear();
     return info;
 }
